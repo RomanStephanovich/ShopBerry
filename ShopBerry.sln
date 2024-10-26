@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBerry", "ShopBerry\ShopBerry.csproj", "{4BA15658-E64A-4A8B-90BC-1527DBB6ECC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopBerry", "ShopBerry\ShopBerry.csproj", "{4BA15658-E64A-4A8B-90BC-1527DBB6ECC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBerry.Data", "Data\ShopBerry.Data.csproj", "{F2F84DD6-C470-4914-8AA3-1CFD8D77B689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBerry.Services", "ShoppBery.Services\ShopBerry.Services.csproj", "{A3B1EF77-C074-4671-93D0-5D58D49BF243}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4BA15658-E64A-4A8B-90BC-1527DBB6ECC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BA15658-E64A-4A8B-90BC-1527DBB6ECC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BA15658-E64A-4A8B-90BC-1527DBB6ECC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F84DD6-C470-4914-8AA3-1CFD8D77B689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F84DD6-C470-4914-8AA3-1CFD8D77B689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F84DD6-C470-4914-8AA3-1CFD8D77B689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F84DD6-C470-4914-8AA3-1CFD8D77B689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3B1EF77-C074-4671-93D0-5D58D49BF243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B1EF77-C074-4671-93D0-5D58D49BF243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B1EF77-C074-4671-93D0-5D58D49BF243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B1EF77-C074-4671-93D0-5D58D49BF243}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

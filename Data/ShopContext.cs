@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopBerry.Models;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace ShopBerry.Data
 {
@@ -38,8 +40,8 @@ namespace ShopBerry.Data
             );
 
             modelBuilder.Entity<Order>().HasData(
-                new Order { Id = 1, IsCompleted = false , CustomerId = 1 },
-                new Order { Id = 2, IsCompleted = true , CustomerId = 2 }
+                new Order { Id = 1, IsCompleted = false, CustomerId = 1 },
+                new Order { Id = 2, IsCompleted = true, CustomerId = 2 }
             );
         }
     }

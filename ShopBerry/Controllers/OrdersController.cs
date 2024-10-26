@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using ShopBerry.Data;
+using ShopBerry.Services;
+using ShopBerry.Services.Interfaces;
 using ShopBerry.Models;
 using ShopBerry.Models.Dtos;
 
@@ -13,23 +14,18 @@ namespace ShopBerry.Controllers
 
     public class OrdersController : ControllerBase // Лучше использовать ControllerBase для API
     {
-        private readonly ShopContext _context;
-
-        public OrdersController(ShopContext context)
+        private readonly IOrdersControllerService _orderService;
+        public OrdersController(IOrdersContrllerService orderService)
         {
-            _context = context;
+            _orderService = orderService;
         }
 
         // GET: api/orders
         [HttpGet] // Получить все заказы
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> GetAllOrders()
         {
-            var orders = await _context.Orders
-                .Include(o => o.Customer)
-                .Include(o => o.OrderItems)
-                .ToListAsync();
-
-            return Ok(orders); // Возвращаем список заказов в формате JSON
+            var orders = await _orderService.GetAllOrdersAsync();
+            return Ok(orders);
         }
 
         // GET: api/orders/{id}
